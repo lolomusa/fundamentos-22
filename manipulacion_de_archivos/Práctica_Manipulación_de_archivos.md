@@ -57,9 +57,9 @@ Escribí un programa que lea un archivo, reemplace una letra por esa misma letra
 Realizá un programa que lea un archivo, elimine todos los saltos de línea y lo guarde en otro archivo.
 ¨
         def eliminar_saltos(entrada,salida):
-         with open(entrada,"r") as f, open(salida,"w") as s:
-             for line in f:
-                    s.write(line.strip("\n"))
+            with open(entrada,"r") as f, open(salida,"w") as s:
+        for line in f:
+            s.write(line.strip("\n"))
 
 ##### **Ejercicio 7**
 Escribí un porgrama que lea un archivo e identifique la palabra más larga, la cual debe imprimir y decir cuantos caracteres tiene.

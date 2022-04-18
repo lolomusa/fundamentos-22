@@ -124,6 +124,7 @@ Como seguramente pudiste deducir un punto (.) se utiliza para referenciar al "di
 >
 > 🧗‍♀️ Desafío I: Creá un archivo de prueba (`bio.txt`) en la carpeta destinada a los prácticos de la materia.
 >
+    
 
 [5. Automatización en la construcción de rutas](#5-os)
 
