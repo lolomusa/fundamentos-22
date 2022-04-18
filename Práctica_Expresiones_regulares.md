@@ -141,3 +141,9 @@ Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
 
 ##### **Ejercicio 15**
 Realizá un programa que validar si una cuenta de mail está escrita correctamente.
+
+        correo = "nombre@correo.dominio"
+        if "@" in correo:
+        	print("Es válido")
+        else:
+	        print("No es válido")
