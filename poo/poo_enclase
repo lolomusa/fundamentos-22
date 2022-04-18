@@ -122,15 +122,14 @@ def volar(self, kms):
     if self.energia <= 0: 
         return False
     else: 
-        self-energia -= 10 + kms''' #asi? Hay que poner el return?
+self-energia -= 10 + kms''' 
 
+#EJERICIO 5
 
-
-
-        from aves import pepita, juanita, roberta
+from ave import pepita, juanita, roberta
 class AnimalesAlado: 
     def esta_feliz(self): 
-      return self.energia > 500        #EJERICIO 5
+      return self.energia > 500        
 
 class Golondrina(AnimalesAlado):
   def _init_(self, energia):
