@@ -3,8 +3,31 @@
 ##### **Ejercicio 1**
 Escribí un programa de python que imprima un diccionario cuyas claves sean los números de 1 a 15 y cuyos valores sean las potencias al cuadrado de estos números.
 
+        diccionario = {
+         "1": 1,
+         "2": 4,
+         "3": 9,
+         "4": 16,
+         "5":
+         }
+        print diccionario, type(diccionario)
+        { "1": 1,
+         "2": 4,
+         "3": 9,
+         "4": 16,
+         "5": 25} <type 'dict'>
+
 ##### **Ejercicio 2**
 Realizá un programa que imprima la suma de todos los valores de un diccionario de números.
+
+        diccionario = {1, 2, 3, 4} 
+        
+        print diccionario, type(diccionario)
+        { "1": 1,
+         "2": 4,
+         "3": 9,
+         "4": 16,
+         "5": 25} <type 'dict'>
 
 ##### **Ejercicio 3**
 Escribí un programa que obtenga, a partir de una lista de strings una lista con la longitud de esas strings e imprima la longitud de la lista de strings y los elementos de la lista de longitudes
