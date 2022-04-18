@@ -17,6 +17,11 @@ Escribí un programa que lea un archivo e imprima las primeras n líneas.
 
     from itertools import islice
 
+    with open('nombreArchivo', 'r') as file: 
+    contentList = file.readlines()
+    for i in range(len(contentList) + n), len(contentList):
+        print(contentList[i])
+        
     def imprimir_n(archivo, cantidad_de_lineas):
         with open(archivo, "r") as f:
             for linea in islice(f, cantidad_de_lineas):
@@ -25,14 +30,16 @@ Escribí un programa que lea un archivo e imprima las primeras n líneas.
 ##### **Ejercicio 3**
 Escribí un programa que lea un archivo, guarde las líneas del archivo en una lista y luego imprima las n últimas.
 
-        def guardar_en_lista(archivo, lineas):
-         lista=[]
-         with open(archivo,"r") as file:
-              for line in file:
-                  lista.append(line)
-              for line in file[lineas-1:]:
-                 print(line)
+        with open('nombreArchivo', 'r') as file: 
+    contentList = file.readlines() 
+    for i in range(len(contentList) - n), len(contentList): 
+        print(contentList[i])
 
+    def read_n_back_lines(n, archivo): 
+    texto = open(archivo, "r").readlines()
+    for i in range((len(texto) -n), len(texto)):
+        print(texto[i])
+    texto.close()
 ##### **Ejercicio 4**
 Hacé un programa que lea un archivo, cuente la cantidad de palabras del archivo y luego imprima el resultado.
 
