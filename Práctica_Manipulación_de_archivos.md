@@ -25,8 +25,13 @@ Escribí un programa que lea un archivo e imprima las primeras n líneas.
 ##### **Ejercicio 3**
 Escribí un programa que lea un archivo, guarde las líneas del archivo en una lista y luego imprima las n últimas.
 
-    def guardar_en_lista(archivo, lineas):
-    lista=
+        def guardar_en_lista(archivo, lineas):
+         lista=[]
+         with open(archivo,"r") as file:
+              for line in file:
+                  lista.append(line)
+              for line in file[lineas-1:]:
+                 print(line)
 
 ##### **Ejercicio 4**
 Hacé un programa que lea un archivo, cuente la cantidad de palabras del archivo y luego imprima el resultado.
@@ -51,7 +56,11 @@ Escribí un programa que lea un archivo, reemplace una letra por esa misma letra
 ##### **Ejercicio 6**
 Realizá un programa que lea un archivo, elimine todos los saltos de línea y lo guarde en otro archivo.
 ¨
-    
+        def eliminar_saltos(entrada,salida):
+         with open(entrada,"r") as f, open(salida,"w") as s:
+             for line in f:
+                    s.write(line.strip("\n"))
+
 ##### **Ejercicio 7**
 Escribí un porgrama que lea un archivo e identifique la palabra más larga, la cual debe imprimir y decir cuantos caracteres tiene.
 
@@ -67,6 +76,10 @@ Escribí un porgrama que lea un archivo e identifique la palabra más larga, la 
 
 ##### **Ejercicio 8**
 Escribí un programa que abra dos documentos y guarde el contenido de ambos en un otro documento ya existente.
+
+        def join_files(file1,file2,file3):
+         with open(file1,"r") as f1, open (file2,"r") as f2, open(file3,"a") as f3:
+             f3.write(f1.read() + f2.read())
 
 ##### **Ejercicio 9**
 Realizá un programa que lea un archivo y obtenga la frecuencia de cada palabra que hay en el archivo. Recordá que la frecuencia es la relación entre número de veces que aparece la palabra en cuestión con respecto a la cantidad total de palabras.
