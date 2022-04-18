@@ -124,7 +124,10 @@ Como seguramente pudiste deducir un punto (.) se utiliza para referenciar al "di
 >
 > 🧗‍♀️ Desafío I: Creá un archivo de prueba (`bio.txt`) en la carpeta destinada a los prácticos de la materia.
 >
-    
+        bio = (C:\Users\memal\OneDrive\Desktop\UCEMA\F_informatica\fundamentos-22\manipulacion_de_archivos\practico_desafio)
+        with open(bio, w) as file
+
+
 
 [5. Automatización en la construcción de rutas](#5-os)
 
@@ -145,7 +148,9 @@ Aquí, el directorio de trabajo actual es '/home/Ana' y cambiamos al directorio 
 >
 > 🧗‍♀️ Desafío II: Investigá sobre los métodos ```os.mkdir()``` y ```os.listdir()```
 >
+        os.mkdir() = metodo de python usado para creat dicionarios llamados path con metodo numerico especifico.
 
+        os.listdir() = metodo de python usado para tener la lista de todos los archivos y directorios en el directorio especifico.
 
 [6. Lectura y escritura de archivos](#6-read)
 

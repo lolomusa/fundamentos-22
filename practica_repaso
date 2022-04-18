@@ -8,8 +8,8 @@ Escribí un programa de python que imprima un diccionario cuyas claves sean los 
          "2": 4,
          "3": 9,
          "4": 16,
-         "5":
-         }
+         "5": 25}
+         
         print diccionario, type(diccionario)
         { "1": 1,
          "2": 4,
@@ -21,7 +21,7 @@ Escribí un programa de python que imprima un diccionario cuyas claves sean los 
 Realizá un programa que imprima la suma de todos los valores de un diccionario de números.
 
         diccionario = {1, 2, 3, 4} 
-        
+
         print diccionario, type(diccionario)
         { "1": 1,
          "2": 4,
