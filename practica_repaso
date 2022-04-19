@@ -12,10 +12,11 @@ Escribí un programa de python que imprima un diccionario cuyas claves sean los 
 ##### **Ejercicio 2**
 Realizá un programa que imprima la suma de todos los valores de un diccionario de números.
 
-        for i in range(numeros):
-            suma ["numero"] = i + ["numero"]
-
-            print("La suma del numero {} es {}".format(suma["numero"], suma["valor"]))
+        numeros={"valor_1": 1, "valor_2":2, "valor_3":3}
+        total=0
+        for i in numeros.values():
+         total += i
+        print(total)    
 
 ##### **Ejercicio 3**
 Escribí un programa que obtenga, a partir de una lista de strings una lista con la longitud de esas strings e imprima la longitud de la lista de strings y los elementos de la lista de longitudes
