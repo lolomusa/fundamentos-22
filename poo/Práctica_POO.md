@@ -25,8 +25,51 @@ class Perro:
 ##### **Ejercicio 2**
 Modificá el método **volar** de la clase `Golondrina` visto en la clase de teoría de manera que no pueda volar si al hacerlo la energía toma el valor 0 o valor negativo.
 
+        class Golondrina:
+          def __init__(self, energia):
+              self.energia = energia
+
+            def comer_alpiste(self, gramos):
+                   self.energia += 4 * gramos
+
+           def volar_en_circulos(self):
+                  self.volar(0)
+
+         def volar(self, kms):
+              if self.energia > 0:
+               self.energia -= 10 + kms #preguntar como hacer funcion si tiene la energia suficiente para volar, pero luego de hacerlo queda en <=0
+             else:
+                  return "No tiene suficiente energia"
+
+          def esta_debil(self):
+               self.energia < 10
+  
+         def esta_feliz(self):
+              self.energia > 500
+
+            def hipo(self): #deben aprender a comer peces
+                 self.energia -= self.volar(20)
+                 self.energia += self.comer_alpiste(10)
+
+        pepita = Golondrina(100)
+        anastasia = Golondrina(200)
+        maria = Golondrina(42)
+
 ##### **Ejercicio 3**
 Creá una clase `Notebook` cuyo estado sea: marca, modelo y precio, y que tenga un método que le aplique un descuento al precio, el cual tiene que recibir un número entero (el porcentaje de descuento) y tiene que devolver cuánto valdría esa notebook si se aplicase el descuento. Por último hay que instanciar esta clase y en algunos casos aplicar este descuento.
+
+        class Notebook:
+          def __innit__(self, marca, modelo, precio):
+               self.marca=marca
+              self.modelo=modelo
+              self.precio=precio
+    
+         def descuentos(self, porcentaje_de_descuento):
+              self.precio -= self.precio*(porcentaje_de_descuento/100)
+
+        hp = Notebook("HP", "Lean", 10000)
+        macbook = Notebook("Apple", "Air", 20000)
+
 
 ##### **Ejercicio 4**
 Definí una clase que modele un contador, el cual puede incrementar o disminuir en uno el valor que se ingresa, recordando el valor actual. También puede resetear este valor y al hacerlo se pone en cero. Además es posible indicar directamente un número nuevo que reemplace al valor actual. Este objeto debe entender los siguientes mensajes:
@@ -55,6 +98,23 @@ contador.dis()
 contador.dis()
 contador.valorActual()
 ```
+        class Contador:
+            def __innit__(self, valor_actual):
+               self.valor=valor_actual
+    
+          def inc(self):
+               self.valor +=1
+    
+          def dis(self):
+                self.valor -= 1
+
+          def reset(self):
+                self.valor=0
+
+            def valor_nuevo(self, valor_nuevo):
+             self.valor=valor_nuevo
+    
+        contador=Contador(0)
 
 ##### **Ejercicio 5**
 Modificá el ejercicio anterior de manera que sea capaz de recordar cual fue el último comando que se le dió, en forma de mensaje. Estos mensajes pueden ser: "reset", "incremento", "disminución" o "actualización" (para cuando se coloca un valor nuevo). El método para saber el último comando es `ultimoComando`, y el resultado de aplicarlo a la serie de comandos dicha en el ejercicio anterior debería ser "disminución".
@@ -86,6 +146,35 @@ calculadora.valorActual()
 
 el resultado debe ser 24.
 
+        class Calculadora:
+    def __innit__(self, accion):
+        self.accion=accion
+
 ##### **Ejercicio 7**
 Definí una clase de gorriones, de los cuales nos interesa conocer dos medidas conocidas como CSS (coeficiente de serenidad silenciosa), CSSP y CSSV (como el CSS pero “pico” y “veces”). El CSS resulta de dividir la cantidad total de kilómetros que vuela desde que se lo comienza a estudiar, por la cantidad total de gramos de comida que ingiere. El CSSP es la misma división pero considerando solamente lo que voló la vez que más voló y lo que comió la vez que más comió. El CSSV es otra vez la misma idea, respecto de la cantidad de veces que voló y comió. Si un gorrión nunca comió, los coeficientes deben ser `None`.
 Un gorrión se considera en equilibrio si su CSS está entre 0.5 y 2.
+
+        class Gorriones:
+         def __innit__(self, kms, gramos):
+              self.kms=kms
+              self.gramos=gramos
+
+            def volar(self, kms_nuevos):
+             self.kms*=kms_nuevos
+    
+            def comer(self, gramos):
+                self.gramos += gramos
+        
+          def CSS(self, kilometros_volados, gramos_de_comida):
+              self.CSS=kilometros_volados / gramos_de_comida
+    
+         def CSSP(self, mayores_kilometros, mayor_gramos):
+              self.CSSP=mayores_kilometros / mayor_gramos
+
+            def CSSV(self, cantidad_de_vuelos, cantidad_comidas):
+                    self.CSSV=cantidad_de_vuelos / cantidad_comidas
+    
+         def equilibrio(self):
+                self.CSSP=0.5<self.CSSP<2
+
+        molinero=Gorriones(100, 10)
