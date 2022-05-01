@@ -68,11 +68,13 @@ coraza()
 encontrarPilaAtomica()
 encontrarEscudo()
 recibirAtaque(puntos)
+
 Al ejecutar esto:
 
 enterprise.encontrarPilaAtomica()
 enterprise.recibirAtaque(14)
 enterprise.encontrarEscudo()
+
 la potencia de la Enterprise debe ser 66, y su coraza debe ser 10.
 
 Agregar al modelo de la Enterprise, la capacidad de entender estos mensajes.
@@ -80,6 +82,43 @@ Agregar al modelo de la Enterprise, la capacidad de entender estos mensajes.
 fortalezaDefensiva(), que es el máximo nivel de ataque que puede resistir, o sea, coraza más potencia.
 necesitaFortalecerse(), tiene que ser true si su coraza es 0 y su potencia es menos de 20.
 fortalezaOfensiva(), que corresponde a cuántos puntos de fuerza tendría un ataque de la Enterprise. Se calcula así: si tiene menos de 20 puntos de potencia entonces es 0, si no es (puntos de potencia - 20) / 2.
+
+        class Enterprise:
+    def __init__(self):
+        self.potencia = 50
+        self.coraza = 5
+
+    def potencia(self):
+
+    def coraza(self):
+        12 detiene ataque 
+        si no alcanza -= 8 self.potencia
+
+    def encontrarPilaAtomica(self):
+        self.potencia += 25
+
+    def encontrarEscudo(self):
+        self.coraza += 10
+
+    def recibirAtaque(self, puntos):
+        return puntos 
+
+    def fortalezaDefensiva(self):
+        return self.coraza + self.potencia
+
+    def necesitaFortalecerse(self):
+        if coraza = 0 amd potencia < 20:
+            return True
+        elif:
+            false
+
+    def fortalezaOfensiva(self):
+        if self.potencia < 20:
+            return 0
+        elif:
+            self.potencia - 20 / 2
+        
+    
 
 **Consigna N°3**
 
