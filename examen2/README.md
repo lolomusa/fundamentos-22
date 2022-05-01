@@ -51,7 +51,9 @@ b) la lista de los substrings delimitados entre ‘aa’ y ‘gg’, que no incl
             print(re.findall(string, patron))
 
         obtener_substrings(patron)
-        
+
+        ['tat']
+
 **Consigna N°2**
 
 Se está pensando en el diseño de un juego que incluye la nave espacial Enterprise. En el juego, esta nave tiene un nivel de potencia de 0 a 100, y un nivel de coraza de 0 a 20. La Enterprise puede:
