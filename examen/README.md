@@ -38,6 +38,13 @@ Escribir funciones que, dado un String, permitan obtener
 
         o
 
+        def ejercicio2(string):
+            print(re.findall(r"aa([^\c]*?)gg", string))
+
+        ejercicio2('ttaatatggttaacatgg')
+
+        o
+
         def funcion_1_2(string):
             aa_gg = re.findall(r'aa([^c].*?)gg', string)
             print(aa_gg)
@@ -156,10 +163,14 @@ Escribí un programa que, por un lado, debe crear una nueva carpeta en la posici
         import glob
         import re
 
-        os.chdir(r"\Users\memal\OneDrive\Desktop\UCEMA\F_informatica\fundamentos-22")
+        os.chdir(r"\Users\memal\OneDrive\Desktop\UCEMA\F_informatica\fundamentos-22\examen")
         os.mkdir("Resultado")
 
         lista_archivos = glob.glob("*.txt")
+
+        os.chdir(r"\Users\memal\OneDrive\Desktop\UCEMA\F_informatica\fundamentos-22\examen\Resultado")
+        os.mkdir("texto_completo.txt")
+
         with open ("texto_completo.txt", 'a') as texto_completo:
             for archivo in lista_archivos:
                 with open(archivo, 'r') as file:
