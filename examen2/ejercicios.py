@@ -1,5 +1,7 @@
 #1
-b)
+#b)
+import re
+
 string = "aa([^c].*?)gg"  #aa literal | grupo de todo lo que no tenga c + cualquier caracter que se repita 0 o mas veces| gg literal
 patron = "ttaatatggttaacatgg"
 
