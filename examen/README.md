@@ -168,10 +168,8 @@ Escribí un programa que, por un lado, debe crear una nueva carpeta en la posici
 
         lista_archivos = glob.glob("*.txt")
 
-        os.chdir(r"\Users\memal\OneDrive\Desktop\UCEMA\F_informatica\fundamentos-22\examen\Resultado")
-        os.mkdir("texto_completo.txt")
-
-        with open ("texto_completo.txt", 'a') as texto_completo:
+        with open("Resultado\texto_completo.txt", "a") as texto_completo:
             for archivo in lista_archivos:
-                with open(archivo, 'r') as file:
-        texto_completo.write(file.read())
+                with open(archivo, "r") as file:
+            texto_completo.write(file.read())
+                
