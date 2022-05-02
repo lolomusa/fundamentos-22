@@ -1,5 +1,5 @@
 import re
-#1
+#EJERCICIO1
 #a)
 import re
 texto = "xsabc9cabcb3sabc9"
@@ -37,7 +37,7 @@ obtener_substrings(patron)
 def sin_c(string):
     return re.findall("aa([^c]*?)gg", string)
     
-#2
+#EJERCICIO2
 class Auto:
     def _init_(self):
         self.cambio = 0
@@ -102,7 +102,7 @@ auto1.Velocidad()
 auto1.consumoActualPorKm()
     #la velocidad debería es 80 y el consumo 0.15 litros/km.
 
-#3
+#EJERCICIO3
 #a)
     #la corrida del script devuelve ZeroDivisionError, es decir, error por división por cero.
 #b)
@@ -126,7 +126,7 @@ def obtener_media(lista):
 
     #Se puede verificar que la lista es una lista, ya que si el parametro es de otro tipo (no iterable) el for no va a funcionar.
 
-#4
+#EJERCICIO4
 import os
 import glob
 
