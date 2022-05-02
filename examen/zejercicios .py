@@ -127,6 +127,7 @@ def obtener_media(lista):
 
     #Se puede verificar que la lista es una lista, ya que si el parametro es de otro tipo (no iterable) el for no va a funcionar.
 obtener_media([])
+
 #EJERCICIO4
 import os
 import glob
