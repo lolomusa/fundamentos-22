@@ -89,36 +89,57 @@ fortalezaOfensiva(), que corresponde a cuántos puntos de fuerza tendría un ata
         self.coraza = 5
 
     def potencia(self):
+        print(self.potencia)
 
     def coraza(self):
-        12 detiene ataque 
-        si no alcanza -= 8 self.potencia
+        print(self.coraza)
 
     def encontrarPilaAtomica(self):
         self.potencia += 25
+        if self.potencia >= 100:
+            self.potencia -= (self.potencia - 100)
 
     def encontrarEscudo(self):
         self.coraza += 10
+        if self.coraza >= 20:
+            self.coraza -= (self.coraza - 20)     
 
     def recibirAtaque(self, puntos):
-        return puntos 
+        resto = self.zoraza - puntos
+        self.coraza -= puntos
+        if self.coraza <= 0:
+            self.coraza -* resto
+        resto2 = self.potencia + resto
+        self.potencia += resto
+        if self.potencia <= 0:
+            self.potencia -= resto2
 
     def fortalezaDefensiva(self):
-        return self.coraza + self.potencia
+    fortaleza = self.coraza + self.potencia
+    print("la fortaleza defensiva es ", fortaleza, ", de la cual ", self coraza, "son de coraza, y ", self.potencia)
 
     def necesitaFortalecerse(self):
-        if coraza = 0 amd potencia < 20:
+        if selfcoraza == 0 amd self.potencia < 20:
             return True
-        elif:
-            false
+        else:
+            return False
 
     def fortalezaOfensiva(self):
-        if self.potencia < 20:
-            return 0
-        elif:
-            self.potencia - 20 / 2
-        
-    
+        if self.potencia <= 20:
+            print(0)
+        else:
+            print((self.potencia - 20) / 2)
+
+enterprise = Enterprise()
+enterprise.encontrarPilaAtomica()
+enterprise.recibirAtaque(14)
+enterprise.encontrarEscudo()
+print(enterprise.potencia)
+print(enterprise.coraza)
+#la potencia de la Enterprise debe ser 66, y su coraza debe ser 10.
+enterprise.fortalezaDefensiva() #toto 76
+enterprise.necesitaFortalecerse() #False
+enterprise.fortalezaOfensiva() #23
 
 **Consigna N°3**
 
