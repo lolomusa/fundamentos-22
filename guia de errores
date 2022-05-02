@@ -1,2 +1,5 @@
-a[/w]g --> busca patro, pero cualquier caracter
-aa([^c]*?)gg --> si pongo *? toma mas q solo el primer y ultimo caracter 
+#1) a[/w]g --> busca patro, pero cualquier caracter
+#2) aa([^c]*?)gg --> si pongo *? toma mas q solo el primer y ultimo caracter 
+#3) pass: cuando no se hacer un ejercicio
+def metodo():
+    pass

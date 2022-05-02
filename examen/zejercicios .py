@@ -39,14 +39,14 @@ def sin_c(string):
     
 #EJERCICIO2
 class Auto:
-    def _init_(self):
+    def __init__(self):
         self.cambio = 0
         self.rpm = 0
         self.consumo = 0.05 
 
     def arrancar(self):
-         self.cambio += 1
-         self.rpm += 500
+        self.cambio += 1
+        self.rpm += 500
    
     def subirCambio(self): 
         if self.cambio < 5:
@@ -67,29 +67,29 @@ class Auto:
             self.rpm -= cantidad
 
     def Velocidad(self):
-        return ((self.rpm / 100) * (0.5 + (self.cambio / 2)))
+        return((self.rpm / 100) * (0.5 + (self.cambio / 2)))
 
     def consumoActualPorKm(self):
-         if self.rpm > 3000:
-             if self.cambio == 1:
-                 return(self.consumo*((self.rpm - 2500) / 500)*3)
-             elif self.cambio == 2:
-                 return(self.consumo*((self.rpm - 2500) / 500)*2)
-             elif self.cambio <= 5:
-                 return(self.consumo*((self.rpm - 2500) / 500))
-         elif self.cambio == 1:
-             return(self.consumo*3)
-         elif self.cambio == 2:
-             return(self.consumo*2)
-         else:
-             return(self.consumo)
+        if self.rpm > 3000:
+            if self.cambio == 1:
+                return(self.consumo*((self.rpm - 2500) / 500)*3)
+            elif self.cambio == 2:
+                return(self.consumo*((self.rpm - 2500) / 500)*2)
+            elif self.cambio <= 5:
+                return(self.consumo*((self.rpm - 2500) / 500))
+        elif self.cambio == 1:
+            return(self.consumo*3)
+        elif self.cambio == 2:
+            return(self.consumo*2)
+        else:
+            return(self.consumo)
         #si los rpm son menores a 3000 y el auto en 3ra, 4ta o 5ta el consumo es el base
 
     def cambioActual(self):
-        return (self.consumo)
+        return(self.consumo)
 
     def rmpActual(self):
-        return (self.rpm)
+        return(self.rpm)
 
 auto1 = Auto()
 auto1.arrancar()
