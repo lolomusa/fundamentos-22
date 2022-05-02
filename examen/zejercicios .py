@@ -7,7 +7,7 @@ patron = "bc9"
 print(re.search(patron, texto))
 #print(re.search(bc9,xsabc9cabcb3sabc9))
 
-#<re.Match object; span=(3, 6), match='bc9'>
+#resultado = <re.Match object; span=(3, 6), match='bc9'>
 
 import re
 texto = "xsabc9cabcb3sabc9"
@@ -15,7 +15,7 @@ patron = "bc9"
 print(re.findall(patron, texto))
 #print(re.findall(bc9,xsabc9cabcb3sabc9))
 
-#['bc9', 'bc9']
+#resultado = ['bc9', 'bc9']
 
 import re
 def cuantas_veces(string):
@@ -32,7 +32,7 @@ def obtener_substrings(patron):
 
 obtener_substrings(patron)
 
-#['tat'] 
+#resultado = ['tat'] 
 
 def sin_c(string):
     return re.findall("aa([^c]*?)gg", string)

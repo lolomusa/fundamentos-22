@@ -35,12 +35,12 @@ Escribir funciones que, dado un String, permitan obtener
             return len(resultado)
 
         2)
-        string = "aa([^c].*?)gg"  #aa literal | grupo de todo lo que no tenga c + cualquier caracter que se repita 0 o mas veces| gg literal
+        string = "aa([^c]*?)gg"  #aa literal | grupo de todo lo que no tenga c + cualquier caracter que se repita 0 o mas veces| gg literal
             patron = "ttaatatggttaacatgg"
 
         def obtener_substrings(patron):
             print(re.findall(string, patron))
-            #print(re.findall(r"aa([^\c]*?)gg", string))
+            #print(re.findall(r"aa([^c]*?)gg", string))
 
         obtener_substrings(patron)
 

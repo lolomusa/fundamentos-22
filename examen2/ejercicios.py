@@ -68,7 +68,7 @@ class Enterprise:
             self.coraza -= (self.coraza - 20)     
 
     def recibirAtaque(self, puntos):
-        resto = self.zoraza - puntos
+        resto = self.coraza - puntos
         self.coraza -= puntos
         if self.coraza <= 0:
             self.coraza -= resto
@@ -102,7 +102,7 @@ print(enterprise.coraza)
 
 #la potencia de la Enterprise debe ser 66, y su coraza debe ser 10.
 
-enterprise.fortalezaDefensiva() #toto 76
+enterprise.fortalezaDefensiva() #76
 enterprise.necesitaFortalecerse() #False
 enterprise.fortalezaOfensiva() #23
 
