@@ -130,6 +130,14 @@ Escribí un programa que reemplace todas las ocurrencias de espacios, guiones ba
 
 ##### **Ejercicio 13**
 Escribí un programa que reemplace los dos primeros caracteres no alfanúmericos por guiones bajos.
+        
+        import re
+
+        def poner_guion_bajo(string):
+            print(re.sub(r"\w+", "_", string, 2))
+
+        string = "Ej 13: otra vez, reemplazamos!"
+        poner_guion_bajo(string)
 
 ##### **Ejercicio 14**
 Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
@@ -142,7 +150,11 @@ Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
 ##### **Ejercicio 15**
 Realizá un programa que validar si una cuenta de mail está escrita correctamente.
 
-        correo = "nombre@correo.dominio"
+        import re
+        def validar_mail(mail):
+        correo = "[a-zA-Z0-9]+[-_\.]*[a-zA-Z0-9]+@[a-z]{1,9}\-[a-z]{2,4}(\.[a-z]{2,4})*"
+        "nombre@correo.dominio"
+                
         if "@" in correo:
         	print("Es válido")
         else:
