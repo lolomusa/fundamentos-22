@@ -91,15 +91,15 @@ class Auto:
     def rmpActual(self):
         return (self.rpm)
 
-    auto1 = Auto()
-    auto1.arrancar()
-    auto1.subirRPM(3500)
-    auto1.subirCambio()
-    auto1.subirCambio()
-    auto1.subirCambio()
-    auto1.bajarCambio()
-    auto1.Velocidad()
-    auto1.consumoActualPorKm()
+auto1 = Auto()
+auto1.arrancar()
+auto1.subirRPM(3500)
+auto1.subirCambio()
+auto1.subirCambio()
+auto1.subirCambio()
+auto1.bajarCambio()
+auto1.Velocidad()
+auto1.consumoActualPorKm()
     #la velocidad debería es 80 y el consumo 0.15 litros/km.
 
 #3

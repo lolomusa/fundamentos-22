@@ -93,15 +93,17 @@ class Enterprise:
         else:
             print((self.potencia - 20) / 2)
 
-    enterprise = Enterprise ()
-    enterprise.encontrarPilaAtomica()
-    enterprise.recibirAtaque(14)
-    enterprise.encontrarEscudo()
-    print(enterprise.potencia)
-    print(enterprise.coraza)
+enterprise = Enterprise()
+enterprise.encontrarPilaAtomica()
+enterprise.recibirAtaque(14)
+enterprise.encontrarEscudo()
+print(enterprise.potencia)
+print(enterprise.coraza)
+
 #la potencia de la Enterprise debe ser 66, y su coraza debe ser 10.
-    enterprise.fortalezaDefensiva() #toto 76
-    enterprise.necesitaFortalecerse() #False
-    enterprise.fortalezaOfensiva() #23
+
+enterprise.fortalezaDefensiva() #toto 76
+enterprise.necesitaFortalecerse() #False
+enterprise.fortalezaOfensiva() #23
 
 #EJERCICIO 3
