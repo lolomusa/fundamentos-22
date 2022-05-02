@@ -79,7 +79,7 @@ class Enterprise:
 
     def fortalezaDefensiva(self):
         fortaleza = self.coraza + self.potencia
-        print("la fortaleza defensiva es ", fortaleza, ", de la cual ", self coraza, "son de coraza, y ", self.potencia)
+        print("la fortaleza defensiva es ", fortaleza, ", de la cual ", self.coraza, "son de coraza, y ", self.potencia)
 
     def necesitaFortalecerse(self):
         if self.coraza == 0 and self.potencia < 20:
@@ -93,7 +93,7 @@ class Enterprise:
         else:
             print((self.potencia - 20) / 2)
 
-    enterprise=Enterprise()
+    enterprise = Enterprise ()
     enterprise.encontrarPilaAtomica()
     enterprise.recibirAtaque(14)
     enterprise.encontrarEscudo()

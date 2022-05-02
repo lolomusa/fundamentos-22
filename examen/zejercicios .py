@@ -48,34 +48,47 @@ class Auto:
          self.rpm += 500
    
     def subirCambio(self): 
-         self.cambio += 1
+        if self.cambio < 5:
+            self.cambio += 1
     
     def bajarCambio(self):
-         self.cambio -= 1
+        if self.cambio > 1:
+            self.cambio -= 1
   
-    def subirRPM(self, RPM):
-         self.rpm += RPM
+    def subirRPM(self, cantidad):
+        if self.rpm + cantidad <= 5000:
+            self.rpm += cantidad
+        else:
+            self.rpm = 5000
     
-    def bajarRPM(self, RPM):
-         self.rpm -= RPM
+    def bajarRPM(self, cantidad):
+        if self.rpm - cantidad >= 0:
+            self.rpm -= cantidad
 
     def Velocidad(self):
-         print((self.rpm / 100) * (0.5 + (self.cambio / 2)))
+        return ((self.rpm / 100) * (0.5 + (self.cambio / 2)))
 
     def consumoActualPorKm(self):
          if self.rpm > 3000:
              if self.cambio == 1:
-                 print(self.consumo*((self.rpm - 2500) / 500)*3)
+                 return(self.consumo*((self.rpm - 2500) / 500)*3)
              elif self.cambio == 2:
-                 print(self.consumo*((self.rpm - 2500) / 500)*2)
+                 return(self.consumo*((self.rpm - 2500) / 500)*2)
              elif self.cambio <= 5:
-                 print(self.consumo*((self.rpm - 2500) / 500))
+                 return(self.consumo*((self.rpm - 2500) / 500))
          elif self.cambio == 1:
-             print(self.consumo*3)
+             return(self.consumo*3)
          elif self.cambio == 2:
-             print(self.consumo*2)
+             return(self.consumo*2)
          else:
-             print(self.consumo)
+             return(self.consumo)
+        #si los rpm son menores a 3000 y el auto en 3ra, 4ta o 5ta el consumo es el base
+
+    def cambioActual(self):
+        return (self.consumo)
+
+    def rmpActual(self):
+        return (self.rpm)
 
     auto1 = Auto()
     auto1.arrancar()
@@ -89,6 +102,27 @@ class Auto:
     #la velocidad debería es 80 y el consumo 0.15 litros/km.
 
 #3
+#a)
+    #la corrida del script devuelve ZeroDivisionError, es decir, error por división por cero.
+#b)
+    #lo que agregue:
+def obtener_media(lista):
+    sumatoria = 0
+
+    for valor in lista:
+
+        sumatoria += valor
+    longitud = len(lista)
+    
+    try:
+        return sumatoria / longitud
+    except ZeroDivisionError:
+        print("no se puede obtener la media ya que la longitud es 0 y  no se puede dividir por dicho numero") #0 la lista esta vacia o algo del estilo
+
+#c)
+    #otra excepcion a considerar es TypeError, ya que se podria ingresar un valor a la lista que no sea de un tipo compatibe con la operacion, 
+    #así como también un OverFlowError, si la división arroja un numero con muchos decimales
+
 #4
 import os
 import glob
