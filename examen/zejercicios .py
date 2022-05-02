@@ -98,8 +98,9 @@ auto1.subirCambio()
 auto1.subirCambio()
 auto1.subirCambio()
 auto1.bajarCambio()
-auto1.Velocidad()
-auto1.consumoActualPorKm()
+print(auto1.Velocidad()) #80.0
+print(auto1.consumoActualPorKm()) #0.15000000000000002
+
     #la velocidad debería es 80 y el consumo 0.15 litros/km.
 
 #EJERCICIO3
@@ -125,7 +126,7 @@ def obtener_media(lista):
     #así como también un OverFlowError, si la división arroja un numero con muchos decimales
 
     #Se puede verificar que la lista es una lista, ya que si el parametro es de otro tipo (no iterable) el for no va a funcionar.
-
+obtener_media([])
 #EJERCICIO4
 import os
 import glob
