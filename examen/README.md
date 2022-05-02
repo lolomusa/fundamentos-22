@@ -27,28 +27,27 @@ Escribir funciones que, dado un String, permitan obtener
 
         ['bc9', 'bc9']
 
+        o
+
+        import re
+        def cuantas_veces(string):
+            resultado = re.findall("bc9", string)
+            return len(resultado)
+
         2)
         string = "aa([^c].*?)gg"  #aa literal | grupo de todo lo que no tenga c + cualquier caracter que se repita 0 o mas veces| gg literal
             patron = "ttaatatggttaacatgg"
 
         def obtener_substrings(patron):
             print(re.findall(string, patron))
+            #print(re.findall(r"aa([^\c]*?)gg", string))
 
         obtener_substrings(patron)
 
-        o
+        o 
 
-        def ejercicio2(string):
-            print(re.findall(r"aa([^\c]*?)gg", string))
-
-        ejercicio2('ttaatatggttaacatgg')
-
-        o
-
-        def funcion_1_2(string):
-            aa_gg = re.findall(r'aa([^c].*?)gg', string)
-            print(aa_gg)
-        funcion_1_2("ttaatatggttaacatgg")
+        def sin_c(string):
+            return re.findall("aa([^c]*?)gg", string)
 
 **Consigna N°2** (POO)
 
@@ -98,34 +97,49 @@ la velocidad debería ser 80 y el consumo 0.15 litros/km.
          self.rpm += 500
    
      def subirCambio(self): 
-         self.cambio += 1
+        if self.cambio < 5:
+            self.cambio += 1
     
      def bajarCambio(self):
-         self.cambio -= 1
+        if self.cambio > 1:
+            self.cambio -= 1
   
      def subirRPM(self, RPM):
-         self.rpm += RPM
+        if self.rpm + cantidad <= 5000:
+            self.rpm += cantidad
+        else:
+            self.rpm = 5000
     
      def bajarRPM(self, RPM):
-         self.rpm -= RPM
+        if self.rpm - cantidad >= 0:
+            self.rpm -= cantidad
 
      def Velocidad(self):
-         print((self.rpm / 100) * (0.5 + (self.cambio / 2)))
+         return((self.rpm / 100) * (0.5 + (self.cambio / 2)))
 
      def consumoActualPorKm(self):
          if self.rpm > 3000:
              if self.cambio == 1:
-                 print(self.consumo*((self.rpm - 2500) / 500)*3)
+                 return(self.consumo*((self.rpm - 2500) / 500)*3)
              elif self.cambio == 2:
-                 print(self.consumo*((self.rpm - 2500) / 500)*2)
+                 return(self.consumo*((self.rpm - 2500) / 500)*2)
              elif self.cambio <= 5:
-                 print(self.consumo*((self.rpm - 2500) / 500))
+                 return(self.consumo*((self.rpm - 2500) / 500))
          elif self.cambio == 1:
-             print(self.consumo*3)
+             return(self.consumo*3)
          elif self.cambio == 2:
-             print(self.consumo*2)
+             return(self.consumo*2)
          else:
-             print(self.consumo)
+             return(self.consumo)
+        #si los rpm son menores a 3000 y el auto en 3ra, 4ta o 5ta el consumo es el base
+
+
+    def cambioActual(self):
+        return (self.consumo)
+
+    def rmpActual(self):
+        return (self.rpm)
+
 
         auto1 = Auto()
         auto1.arrancar()
@@ -146,14 +160,25 @@ Ejecutá el script_misterioso.py y realizá resolvé:
 
         1 - la corrida del script devuelve ZeroDivisionError, es decir, error por división por cero.
 
-        2 - lo que agregue:
-        try:
-            return sumatoria / longitud
-        except:
-            longitud == 0
-            print("no se puede obtener la media ya que la longitud es 0 y  no se puede dividir por dicho numero")
+        2 - 
+        lo que agregue:
+        def obtener_media(lista):
+            sumatoria = 0
 
-        3 - otra excepcion a considerar es TypeError, ya que se podria ingresar un valor a la lista que no sea de un tipo compatibe con la operacion, así como también un OverFlowError, si la división arroja un numero con muchos decimales
+            for valor in lista:
+
+                sumatoria += valor
+            longitud = len(lista)
+    
+            try:
+                return sumatoria / longitud
+            except ZeroDivisionError:
+                print("no se puede obtener la media ya que la longitud es 0 y  no se puede dividir por dicho numero") #0 la lista esta vacia o algo del estilo
+
+        3 - 
+        Otra excepcion a considerar es TypeError, ya que se podria ingresar un valor a la lista que no sea de un tipo compatibe con la operacion, así como también un OverFlowError, si la división arroja un numero con muchos decimales
+
+        Se puede verificar que la lista es una lista, ya que si el parametro es de otro tipo (no iterable) el for no va a funcionar.
 
 **Consigna N°4** (Manejo de archivos)
 
@@ -162,12 +187,24 @@ Escribí un programa que, por un lado, debe crear una nueva carpeta en la posici
         import os
         import glob
 
-        os.chdir(r"\Users\memal\OneDrive\Desktop\UCEMA\F_informatica\fundamentos-22\examen")
-        os.mkdir("Resultado")
+        def unir_txt():
+            os.mkdir("Resultado")
 
-        lista_archivos = glob.glob("*.txt")
-        with open("Resultado\\texto_completo.txt", 'a') as texto_completo:
-         for archivo in lista_archivos:
-             with open(archivo, 'r') as file:
-                 texto_completo.write(file.read())
+            lista_archivos = glob.glob("*.txt")
+            with open("Resultado\\texto_completo.txt", 'a') as texto_completo:
+                for archivo in lista_archivos:
+                    with open(archivo, 'r') as file:
+                        texto_completo.write(file.read())
                 
+
+**otra alternativa:**
+
+        def unir_txt():
+            os.mkdir("Resultado")
+            lista_txt = glob.glob("*.txt")
+            salida = open("Resultado/texto_completo.txt", "a")
+            for txt in lista_txt:
+                archivo = open(txt, "r")
+                salida.write(archivo.read())
+                archivo.close()
+            salida.close()

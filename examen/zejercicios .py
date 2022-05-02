@@ -28,10 +28,11 @@ patron = "ttaatatggttaacatgg"
 
 def obtener_substrings(patron):
     print(re.findall(string, patron))
+    #print(re.findall(r"aa([^\c]*?)gg", string))
 
 obtener_substrings(patron)
 
-#o 
+#['tat'] 
 
 def sin_c(string):
     return re.findall("aa([^c]*?)gg", string)
@@ -129,11 +130,11 @@ def obtener_media(lista):
 import os
 import glob
 
-os.chdir(r"\Users\memal\OneDrive\Desktop\UCEMA\F_informatica\fundamentos-22\examen")
-os.mkdir("Resultado")
+def unir_txt():
+    os.mkdir("Resultado")
 
-lista_archivos = glob.glob("*.txt")
-with open("Resultado\\texto_completo.txt", 'a') as texto_completo:
-    for archivo in lista_archivos:
-        with open(archivo, 'r') as file:
-            texto_completo.write(file.read())
+    lista_archivos = glob.glob("*.txt")
+    with open("Resultado\\texto_completo.txt", 'a') as texto_completo:
+        for archivo in lista_archivos:
+            with open(archivo, 'r') as file:
+                texto_completo.write(file.read())
