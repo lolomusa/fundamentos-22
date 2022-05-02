@@ -123,6 +123,8 @@ def obtener_media(lista):
     #otra excepcion a considerar es TypeError, ya que se podria ingresar un valor a la lista que no sea de un tipo compatibe con la operacion, 
     #así como también un OverFlowError, si la división arroja un numero con muchos decimales
 
+    #Se puede verificar que la lista es una lista, ya que si el parametro es de otro tipo (no iterable) el for no va a funcionar.
+
 #4
 import os
 import glob
