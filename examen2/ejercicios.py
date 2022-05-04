@@ -112,3 +112,9 @@ def validar_mail(mail):
     return bool(re.search(r"[a-zA-Z0-9]+[-_\.]*[a-zA-Z0-9]+@[a-zA-Z]{2,9}(\.[a-zA-z]{2,4})",mail))
 
 print(validar_mail("davidr@gmail.com")) 
+
+import re
+def validar_mail(mail):
+    return(bool(re.match(r"[a-zA-Z0-9]+[-_\.][a-zA-Z0-9]+@[a-z]{1,9}\.[a-z]{2,4}(\.[a-z]{2,4})", mail)))
+
+print(validar_mail("nico.peiretti157@gmail.com"))
