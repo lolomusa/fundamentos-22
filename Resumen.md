@@ -6,7 +6,15 @@ Comando para saber en qué carpeta estoy: pwd
 Comando para volver al directorio anterior: cd ..
 Comando para cambiar directorio: cd
 
+ej mail) 
 
+import re 
+def validar_mail(mail):
+    if re.search(r"[2w.%+-]+@[\w.-]+\.[a-zA-Z]{2,6}", mail) is not None:
+        #\w+[-_\.]*\w+@\w{1,9}\.\w{2,4}(\.\w{2,4}){0,1}
+        print("Mail válido")
+    else:
+        print("Mail inválido, ingrese un mail válido")
 
 
 **División exacta**

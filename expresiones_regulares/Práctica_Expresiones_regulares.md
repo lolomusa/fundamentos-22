@@ -114,10 +114,17 @@ Realizá un programa que dado una lista de strings verifique que dos palabras de
                  lista_strings = ["Práctica Python", "Práctica C++", "Práctica Fortran"]
                  patron = "(P\w*)\s(P\w*)"
 
-                 for string in lista_strings:
+                for string in lista_strings:
                      coincidencia = re.search(patron, string)
-                     if coincidencia is not None:
+                if coincidencia is not None:
                          print(coincidencia.group())
+
+
+        def empiezan_con_P(lista):
+            patron11=r'(P\w*)\W(P\w*)'
+            for elemento in lista:
+                print(re.match(patron11, elemento))
+
 
 ##### **Ejercicio 12**
 Escribí un programa que reemplace todas las ocurrencias de espacios, guiones bajos y dos puntos por la barra vertical (**|**).
