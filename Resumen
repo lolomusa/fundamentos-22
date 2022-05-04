@@ -1,0 +1,32 @@
+Comando para entrar a otra carpeta dentro del directorio: cd (nombre)
+Comando para listar los archivos de la carpeta: ls 
+Comando para saber en qué carpeta estoy: pwd 
+Comando para volver al directorio anterior: cd ..
+Comando para cambiar directorio: cd
+
+r que se lea literalmente lo que está entre comillas
+    .cualquier caracter
+    *0 o mas veces
+    ? ve todos los patrones dentro de string, no solo el primero y el ultimo
+    ^ no contar un caracter/rango que venga despues de ^
+    \. que aparezca literalmente un punto, no el metacaracter
+    + 0 o más veces
+ \n salto de línea
+ \t tab o cambio de pestaña
+ \s espacio
+ $ fin de linea
+ \A inicio de texto
+ \Z fin de texto
+ . coinicide con cualquier caracter de una linea dada
+ * 0 o más
+ + una o más ocurrencias
+ ? 0 o una
+ {n} exactamente n veces
+ {n, m} por lo menos n pero no mas de m
+ \w caracter alfanumerico
+ \W caracter no alfanumerico
+ \d caracter numerico
+ \D caracter no numerico
+ \S cualquier caracter que no sea espacio
+
+ 
