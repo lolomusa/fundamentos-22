@@ -107,3 +107,8 @@ enterprise.necesitaFortalecerse() #False
 enterprise.fortalezaOfensiva() #23
 
 #EJERCICIO 3
+
+def validar_mail(mail):
+    return bool(re.search(r"[a-zA-Z0-9]+[-_\.]*[a-zA-Z0-9]+@[a-zA-Z]{2,9}(\.[a-zA-z]{2,4})",mail))
+
+print(validar_mail("davidr@gmail.com")) 

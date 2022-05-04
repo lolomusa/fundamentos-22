@@ -111,8 +111,8 @@ Realizá un programa que dado una lista de strings verifique que dos palabras de
 
                 empiecen con la letra P y las imprima. (Lista de ejemplo: ["Práctica Python", "Práctica C++", "Práctica Fortran"]).
                 import re
-                 lista_strings = ["Práctica Python", "Práctica C++", "Práctica Fortran"]
-                 patron = "(P\w*)\s(P\w*)"
+                lista_strings = ["Práctica Python", "Práctica C++", "Práctica Fortran"]
+                patron = "(P\w*)\s(P\w*)"
 
                 for string in lista_strings:
                      coincidencia = re.search(patron, string)
